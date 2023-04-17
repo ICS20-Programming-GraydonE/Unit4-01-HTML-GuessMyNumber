@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Meta data--> 
+    <meta charset="utf-8">
+    <meta name="description" content="VolumeSphere, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Graydon Ezzeddin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    <!--Css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--title--> 
+    <title>Random Number</title>
+  </head>
+  <body>
+    <!--JavaScript-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!--MDL--> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> 
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> 
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Random Number!</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <h1>Pick a Number Between One and Six!</h1>
+        <img src="./images/numbers.avif" alt="numbers"
+        <!-- Simple Textfield -->
+        <form action="#">
+          <h3> Number: </h3>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="user-number"
+            />
+            <label class="mdl-textfield__label" for="user-number">Number ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="guessNumber()"
+        >
+          Click!
+        </button>
+        <br/>
+        <p>
+          <div id="program-feedback">
+          </div>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
